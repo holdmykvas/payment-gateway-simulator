@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pj.bankingproject.entities.Wallet;
 import pj.bankingproject.models.TransferRequestDTO;
 import pj.bankingproject.services.TransferService;
 
@@ -20,7 +19,7 @@ public class TransferController {
         this.transferService = transferService;
     }
 
-    //Request body - translator for JSOn
+    //Request body - translator for JSON
     @PostMapping
     public ResponseEntity<String> transferControl(@Valid @RequestBody TransferRequestDTO transferRequestDTO) {
         transferService.transferMoney(
