@@ -28,4 +28,7 @@ public class Wallet {
     @Column(nullable = false)
     private String currency;
 
+    @Version
+    private Long version;
+
 }
